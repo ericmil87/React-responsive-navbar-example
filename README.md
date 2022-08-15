@@ -4,10 +4,13 @@ React Responsive Nav Menu example.
 
 # To add to your project
 
-Make a Copy into your project and Edit /components/NavBar.js, then set title and href for each link you want. You can create as many as you want just make sure to keep an valid array of objects on NavBarLinks.
+Make a Copy /components/NavBar.js and /components/NavBar.css
 
 ## /components/NavBar.js
-[code]
+
+Edit /components/NavBar.js, then set title and href for each link you want. You can create as many as you want just make sure to keep an valid array of objects on NavBarLinks.
+
+```
 const NavBarLinks = [
 {
 title: "Home",
@@ -26,13 +29,14 @@ title: "Contact Us",
 href: "/contact",
 },
 ];
-[/code]
+```
 
 ## ./App.js
 
-Be sure to import NavBar component, React Router and your pages components.
-[code]
-// import "./App.css"; // This is pages css file (I guess this will not be needed for your project)
+```
+// Be sure to import NavBar component, React Router and your pages components.
+
+// import "./App.css"; // This is the file for Pages Styles (I guess this will not be needed for your project)
 import NavBar from "./components/NavBar"; // This is the NavBar component itself.
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; // This is the React Router component needed to use react links
 
@@ -43,31 +47,30 @@ import { Blog } from "./components/Pages/Blog";
 import { Contact } from "./components/Pages/Contact";
 
 // then on
-
 function App() {
-return (
-<>
-<Router>
-{/* Render NavBar component */}
-<NavBar />
+    return (
+        <>
+        <Router>
+        {/* Render NavBar component */}
+        <NavBar />
 
-        <div className="pages">
-          <Switch>
-            {/* edit here your Routes and set their path(url) and component */}
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/blog" component={Blog} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
-        </div>
-      </Router>
-    </>
+                <div className="pages">
+                <Switch>
+                    {/* edit here your Routes and set their path(url) and component */}
+                    <Route exact path="/" component={Home} />
+                    <Route path="/about" component={About} />
+                    <Route path="/blog" component={Blog} />
+                    <Route path="/contact" component={Contact} />
+                </Switch>
+                </div>
+            </Router>
+        </>
 
-);
+    );
 }
-[/code]
 
 export default App;
+```
 
 That's all
 

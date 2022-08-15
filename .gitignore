@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.eslintcache
+backups-gitignore/gitbkp.zip
+React-Responsive-NavBar-Example.zip
