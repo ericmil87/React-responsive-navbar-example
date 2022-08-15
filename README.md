@@ -7,7 +7,7 @@ React Responsive Nav Menu example.
 Make a Copy into your project and Edit /components/NavBar.js, then set title and href for each link you want. You can create as many as you want just make sure to keep an valid array of objects on NavBarLinks.
 
 ## /components/NavBar.js
-
+[code]
 const NavBarLinks = [
 {
 title: "Home",
@@ -26,11 +26,12 @@ title: "Contact Us",
 href: "/contact",
 },
 ];
+[/code]
 
 ## ./App.js
 
 Be sure to import NavBar component, React Router and your pages components.
-
+[code]
 // import "./App.css"; // This is pages css file (I guess this will not be needed for your project)
 import NavBar from "./components/NavBar"; // This is the NavBar component itself.
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; // This is the React Router component needed to use react links
@@ -41,13 +42,13 @@ import { About } from "./components/Pages/About";
 import { Blog } from "./components/Pages/Blog";
 import { Contact } from "./components/Pages/Contact";
 
-then on
+// then on
 
 function App() {
 return (
 <>
 <Router>
-{/_ Render NavBar component _/}
+{/* Render NavBar component */}
 <NavBar />
 
         <div className="pages">
@@ -64,6 +65,7 @@ return (
 
 );
 }
+[/code]
 
 export default App;
 
